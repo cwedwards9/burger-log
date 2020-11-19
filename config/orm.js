@@ -16,7 +16,7 @@ const orm = {
         });
     },
     updateOne: function(tableInput, val, condition, cb) {
-        const q = "UPDATE ?? SET devoured = ?? WHERE id = ??";
+        const q = "UPDATE ?? SET devoured = ? WHERE id = ?";
         connection.query(q, [tableInput, val, condition], (err, result) => {
             if(err) throw err;
             cb(result);
