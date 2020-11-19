@@ -2,8 +2,19 @@
 
 <ul>
     {{#each burgers}}
-        <li>{{burger_name}}</li>
-        <button class="updateBurger" type="submit" burger-id="{{id}}">Devour!</button>
+        {{#unless devoured}}
+            <li>{{burger_name}}</li>
+            <button class="updateBurger" type="submit" burger-id="{{id}}">Devour!</button>
+        {{/unless}}
+    {{/each}}
+</ul>
+
+<ul>
+    {{#each burgers}}
+        {{#if devoured}}
+            <li>{{burger_name}}</li>
+            <button class="updateBurger" type="submit" burger-id="{{id}}">Devour!</button>
+        {{/if}}
     {{/each}}
 </ul>
 
