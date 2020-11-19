@@ -11,8 +11,9 @@ const Burger = {
             cb(res);
         });
     },
-    update: (val, condition, cb) => {
-        orm.updateOne("burgers", val, condition, (res) => {
+    update: (condition, cb) => {
+        let conditionNum = Number(condition);
+        orm.updateOne("burgers", true, conditionNum, (res) => {
             cb(res);
         });
     }
