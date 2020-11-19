@@ -16,7 +16,9 @@ router.post("/api/burgers", (req, res) => {
 });
 
 router.put("/api/burgers/:id", (req, res) => {
-
+    Burger.update(req.params.id, () => {
+        res.status(200).end();
+    });
 });
 
 
