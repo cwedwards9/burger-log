@@ -16,3 +16,13 @@ $("#createBurger").on("submit", (e) => {
 });
 
 // Updating a burger in the list and changing its devoured column from false to true
+$(".updateBurger").on("click", function() {
+    let id = $(this).attr("burger-id");
+
+    $.ajax("/api/burgers/" + id, {
+        type: "PUT"
+    }).then(() => {
+        console.log("You devoured the burger!");
+        location.reload();
+    });
+});
