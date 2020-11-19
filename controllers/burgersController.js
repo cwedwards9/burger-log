@@ -10,7 +10,9 @@ router.get("/", (req, res) => {
 });
 
 router.post("/api/burgers", (req, res) => {
-
+    Burger.create(req.body.burgerName, (result) => {
+        res.json({id: result.insertId});
+    });
 });
 
 router.put("/api/burgers/:id", (req, res) => {
