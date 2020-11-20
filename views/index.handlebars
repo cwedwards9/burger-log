@@ -1,27 +1,39 @@
-<h1>Burgers!</h1>
+<header>
+    <h1>Burger Log</h1>
+    <img id="burger-img" src="/assets/img/burger-img.png">
+    <form id="createBurger">
+        <input type="text" name="burgerName">
+        <button type="submit">Add Burger</button>
+    </form>
+    <p>Enter a burger you want to eat and click the "Add Burger" button</p>
+</header>
 
-<ul>
-    {{#each burgers}}
-        {{#unless devoured}}
-            <li>{{burger_name}}</li>
-            <button class="updateBurger" type="submit" burger-id="{{id}}">Devour!</button>
-        {{/unless}}
-    {{/each}}
-</ul>
-
-<ul>
-    {{#each burgers}}
-        {{#if devoured}}
-            <li>{{burger_name}}</li>
-            <button class="updateBurger" type="submit" burger-id="{{id}}">Devour!</button>
-        {{/if}}
-    {{/each}}
-</ul>
-
-
-<form id="createBurger">
-    <input type="text" name="burgerName">
-    <button type="submit">Add Burger</button>
-</form>
-
+<main>
+    {{!-- List of all burgers that have not been devoured (eaten) --}}
+    <section id="burgersToDevour">
+        <h1 class="burgerCategory">Burgers to Devour</h1>
+        <ul>
+            {{#each burgers}}
+                {{#unless devoured}}
+                    <div class="freshBurger">
+                        <li><i class="fas fa-hamburger"></i>{{burger_name}}</li>
+                        <button class="updateBurger" type="submit" burger-id="{{id}}">Devour!</button>
+                    </div>
+                {{/unless}}
+            {{/each}}
+        </ul>
+    </section>
+    
+    {{!-- List of all burgers that have been devoured --}}
+    <section id="devouredBurgers">
+        <h1 class="burgerCategory">Burgers Devoured</h1>
+        <ul>
+            {{#each burgers}}
+                {{#if devoured}}
+                    <li><i class="fas fa-hamburger"></i>{{burger_name}}</li>
+                {{/if}}
+            {{/each}}
+        </ul>
+    </section>
+</main>
 
