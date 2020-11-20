@@ -1,5 +1,6 @@
 const orm = require("../config/orm");
 
+// The Burger model with three methods: 1) selecting all data 2) creating and 3) updating a new piece of data
 const Burger = {
     selectAll: (cb) => {
         orm.selectAll("burgers", (res) => {

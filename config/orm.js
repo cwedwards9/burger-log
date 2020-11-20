@@ -1,5 +1,6 @@
 const connection = require("./connection");
 
+// The ORM, that helps convert our data from our requests to a usable query string for MySQL
 const orm = {
     selectAll: function(tableInput, cb) {
         const q = "SELECT * FROM ??";
