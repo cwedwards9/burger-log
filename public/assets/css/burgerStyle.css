@@ -1,0 +1,98 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    background: #FFEFBA;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FFEFBA, #FFFFFF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FFEFBA, #FFFFFF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+header {
+    width: 450px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 4rem;
+    color: #DB4847;
+    text-align: center;
+    margin: 5px;
+}
+
+#burger-img {
+    width: 200px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+header form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+form input {
+    border-radius: 10px;
+    height: 30px;
+}
+form input:focus {
+    border: none;
+}
+
+header p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.burgerCategory {
+    margin-left: 40px;
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+main {
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+li {
+    list-style: none;
+    font-size: 30px;
+    /* margin-bottom: 50px; */
+}
+
+li i {
+    color: #E0AB6E;
+    margin-right: 10px;
+}
+
+#burgersToDevour li {
+    display: inline;
+}
+
+button {
+    display: inline-block;
+    margin-left: 5px;
+    border: none;
+    border-radius: 15px;
+    background-color: #E0AB6E;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+button:hover {
+    background-color: white;
+    color: #E0AB6E;
+}
+
+#burgersToDevour,
+#devouredBurgers {
+    width: 475px;
+}
+
+#devouredBurgers li {
+    opacity: 0.75;
+}
+#devouredBurgers i {
+    opacity: 0.40;
+}
