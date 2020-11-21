@@ -1,11 +1,10 @@
 const express = require("express");
-
 const app = express();
 
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 
-
-app.use(express.static('public'))
+// Use public directory
+app.use(express.static('public'));
 
 // Parse application body
 app.use(express.urlencoded({ extended: true }));
@@ -17,13 +16,12 @@ let exphbs = require("express-handlebars");
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
-// Import routes and give the server access to them.
+// Import routes and give the server access to them
 let routes = require("./controllers/burgersController.js");
 
 app.use(routes);
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
+app.listen(PORT, () => {
   console.log("App listening on PORT " + PORT);
 });
