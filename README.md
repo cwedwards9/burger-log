@@ -13,10 +13,9 @@ DEMO:
 
 # Technologies
 * Node.js
-* Packages:
-    * Express
-    * MySQL
-    * [Express-handlebars](https://www.npmjs.com/package/express-handlebars)
+* Express
+* MySQL
+* [Express-handlebars](https://www.npmjs.com/package/express-handlebars)
 
 ## Contributing
 Feel free to submit pull requests.
